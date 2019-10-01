@@ -1,0 +1,4 @@
+>>> Warning 203 "main232.c" Line 260(1,1): Condition always TRUE
+      Memory usage:   ROM=21%      RAM=13% - 19%
+      0 Errors,  1 Warnings.
+Build Successful.

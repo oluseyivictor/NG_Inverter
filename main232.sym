@@ -1,0 +1,126 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+005.0   Mains_Detect
+005.1   Inverter_Working
+006.7   Charging_Relay
+007.3   Low_Battery
+007.6   Buzzer
+00E     TMR1L
+00F     TMR1H
+010     T1CON
+015     CCP_1
+015     CCPR1L
+015     CCP_1_LOW
+016     CCPR1H
+016     CCP_1_HIGH
+017     CCP1CON
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C-031 value
+032-033 TBL_POINTER_NEW
+034-035 TBL_POINTER_OLD
+036.0   Direction
+036.1   Overload_Condition
+036.2   Turn_On
+037     step
+038     Grid_Available
+039-03C Battery_Voltage
+03D-040 Temperature
+041-044 @MULFF.P1
+041-042 @ITOF.P2
+041-044 @FLT.P3
+041-042 @MUL1616.P4
+041     Read_Measure.@SCRATCH1
+041     LED_Sequence.@SCRATCH1
+041     Charge_Batt.@SCRATCH1
+041     Overload_Detect.@SCRATCH1
+042     @delay_ms1.P1
+042     Read_Measure.@SCRATCH2
+043-044 @MUL1616.P1
+045-048 @FLT.P1
+045-048 @MULFF.P2
+045     @MUL1616.@SCRATCH1
+049     @MULFF.@SCRATCH1
+049     @FLT.@SCRATCH1
+04A     @MULFF.@SCRATCH2
+04A     @FLT.@SCRATCH2
+04B     @MULFF.@SCRATCH3
+04C     @MULFF.@SCRATCH4
+04D     @MULFF.@SCRATCH5
+04E     TIMER2_isr.@SCRATCH1
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+11B.6   C2OUT
+11B.7   C1OUT
+
+ROM Allocation:
+000043  DUTY_CYCLE1.call
+000047  DUTY_CYCLE1.data
+000060  DUTY_CYCLE2.call
+000064  DUTY_CYCLE2.data
+00007D  TIMER2_isr
+0000CF  CCP1_isr
+0000DB  TIMER1_isr
+0000DE  GPIO_Config
+0000FC  @delay_ms1
+000110  @MUL1616
+000125  @ITOF
+000142  Read_Measure
+000181  @MULFF
+000249  LED_Sequence
+000261  @FLT
+0002B1  Check_Button
+0002D0  Mains_Detect
+0002EB  Overload_Detect
+0002FD  Charge_Batt
+00030C  MAIN
+00030C  @cinit1
+000329  @cinit2
+
+Project Directory:
+    C:\Users\Pinthotec\Desktop\Inverter_Code\
+
+Project Files:
+    main232.c                                               [16-Sep-19 07:48  CRC=1EEF138F]
+    main232.h                                               [15-Sep-19 12:22  CRC=D77AA583]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F690.h   [08-Sep-15 15:14  CRC=79E20B50]
+
+Source signature=EA2DCFB2
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=6B49
+
+Units:
+    main232 (main)
+
+Compiler Settings:
+    Processor:      PIC16F690
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main232.xsym
+    Errors:      main232.err
+    Ext Symbols: main232.esym
+    INHX8:       main232.hex
+    Symbols:     main232.sym
+    List:        main232.lst
+    Debug/COFF:  main232.cof
+    Project:     main232.ccspjt
+    Call Tree:   main232.tre
+    Statistics:  main232.STA
